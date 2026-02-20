@@ -1,0 +1,43 @@
+<section class="architecture" id="architecture">
+  <div class="container">
+    <h2 class="section-title">Architecture</h2>
+
+    <p class="section-subtitle">
+      Nx Monorepo • Angular Shell • NgRx • Module Federation
+    </p>
+
+    <div class="nx-frame">
+
+      <div class="nx-label">Nx Monorepo</div>
+
+      <div class="arch-stack">
+
+        <div class="arch-layer shared">
+          <h3>Shared Libraries</h3>
+          <p>ui • data-access • utils • design-system</p>
+        </div>
+
+        <div class="arch-layer core">
+          <h3>Core Shell (Angular + NgRx)</h3>
+          <p>auth • layout • global store • guards</p>
+        </div>
+
+        <div class="arch-layer feature">
+          <h3>Feature Applications</h3>
+          <p>domain-driven UI modules</p>
+        </div>
+
+        <div class="mfe-row">
+          <div class="mfe-app" *ngFor="let app of mfeApps">
+            {{ app }}
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <p class="architecture-note">
+      Nx orchestrates build, lint, test, and independent MFE deployments.
+    </p>
+  </div>
+</section>

@@ -1,0 +1,94 @@
+.hero {
+  @apply py-4;
+
+  &__container {
+    @apply grid md:grid-cols-2 gap-12 items-center;
+  }
+
+  &__content {
+    @apply max-w-xl;
+  }
+
+  &__title {
+    @apply text-[48px] font-bold text-text mb-4 leading-tight;
+  }
+
+  &__subtitle {
+    @apply text-xl font-semibold text-primary mb-4;
+  }
+
+  &__description {
+    @apply text-lg text-muted mb-8;
+  }
+
+  &__actions {
+    @apply flex gap-4 mb-6;
+  }
+
+  &__contact {
+    @apply flex gap-3 flex-wrap;
+  }
+
+  &__avatar {
+    @apply flex justify-center md:justify-start;
+
+    &-wrapper {
+      @apply w-[600px] rounded-2xl shadow-card bg-white p-4;
+
+      img {
+        @apply rounded-xl w-full h-auto;
+      }
+    }
+  }
+}
+
+/* BUTTONS */
+.btn {
+  @apply px-6 py-3 rounded-xl text-sm font-medium transition;
+
+  &--primary {
+    @apply bg-primary text-white hover:bg-primaryHover;
+  }
+
+  &--outline {
+    @apply border border-border text-text hover:bg-section;
+  }
+}
+
+/* CONTACT PILLS */
+.pill {
+  @apply border border-border px-4 py-2 rounded-lg text-sm text-muted;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    &__title {
+      @apply text-4xl;
+    }
+
+    &__avatar-wrapper {
+      @apply w-[300px] mt-8;
+    }
+  }
+}
+
+.hero__container {
+  @apply grid lg:grid-cols-2 gap-10 lg:gap-16 items-center;
+}
+
+.hero__title {
+  @apply text-3xl sm:text-4xl lg:text-[48px];
+}
+
+.hero__description {
+  @apply text-base sm:text-lg;
+}
+
+.hero__actions {
+  @apply flex flex-col sm:flex-row gap-3 sm:gap-4;
+}
+
+.hero__avatar-wrapper {
+  @apply w-[100%] sm:w-[400px] lg:w-[500px] mx-auto;
+}

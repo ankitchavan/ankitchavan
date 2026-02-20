@@ -1,0 +1,50 @@
+.projects {
+  @apply py-24;
+
+  &__title {
+    @apply text-3xl font-semibold text-center mb-12;
+  }
+
+  &__grid {
+    @apply grid gap-6 md:grid-cols-3;
+  }
+}
+
+/* PROJECT CARD */
+.project-card {
+  @apply bg-card p-6 rounded-xl2 shadow-card border border-border transition;
+
+  &:hover {
+    @apply -translate-y-1 shadow-lg;
+  }
+
+  &__title {
+    @apply text-xl font-semibold mb-2;
+  }
+
+  &__description {
+    @apply text-muted text-sm mb-4;
+  }
+
+  &__tags {
+    @apply flex flex-wrap gap-2;
+  }
+}
+
+/* TAG CHIP */
+.tag {
+  @apply text-xs border border-border px-3 py-1 rounded-lg text-muted;
+}
+
+.projects__grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .projects {
+    &__title {
+      @apply text-2xl;
+    }
+  }
+}

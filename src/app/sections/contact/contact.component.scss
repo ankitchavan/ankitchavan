@@ -1,0 +1,45 @@
+.contact {
+  @apply py-24 text-center;
+
+  &__title {
+    @apply text-3xl font-semibold mb-4;
+  }
+
+  &__subtitle {
+    @apply text-muted max-w-xl mx-auto mb-8;
+  }
+
+  &__actions {
+    @apply flex justify-center gap-4 mb-6 flex-wrap;
+  }
+
+  &__resume {
+    @apply inline-block;
+  }
+}
+
+.contact__actions {
+  @apply flex flex-col sm:flex-row justify-center gap-3 sm:gap-4;
+}
+
+/* BUTTONS (shared styles if not already global) */
+.btn {
+  @apply px-6 py-3 rounded-xl text-sm font-medium transition;
+
+  &--primary {
+    @apply bg-primary text-white hover:bg-primaryHover;
+  }
+
+  &--outline {
+    @apply border border-border text-text hover:bg-section;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact {
+    &__title {
+      @apply text-2xl;
+    }
+  }
+}

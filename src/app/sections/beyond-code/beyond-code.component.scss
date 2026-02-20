@@ -1,0 +1,55 @@
+.beyond-code {
+  background: #f8fafc;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.beyond-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.beyond-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 40px 24px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  cursor: default;
+
+  .icon {
+    font-size: 42px;
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 14px;
+    color: #475569;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  }
+}
+
+/* subtle color accents */
+.cricket { border-top: 4px solid #22c55e; }
+.flute { border-top: 4px solid #a855f7; }
+.steps { border-top: 4px solid #3b82f6; }
+
+@media (max-width: 768px) {
+  .beyond-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

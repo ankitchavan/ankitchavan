@@ -1,0 +1,50 @@
+.experience {
+  @apply py-24;
+
+  &__title {
+    @apply text-3xl font-semibold text-center mb-12;
+  }
+}
+
+/* TIMELINE WRAPPER */
+.timeline {
+  @apply relative max-w-2xl mx-auto border-l border-border pl-8;
+}
+
+/* EACH ITEM */
+.timeline__item {
+  @apply relative mb-10;
+}
+
+/* DOT */
+.timeline__dot {
+  @apply absolute -left-[2.375rem] top-1 w-3 h-3 bg-primary rounded-full;
+}
+
+/* CONTENT */
+.timeline__content {
+  @apply bg-card p-5 rounded-xl border border-border shadow-card;
+}
+
+.timeline__company {
+  @apply text-lg font-semibold mb-1;
+}
+
+.timeline__role {
+  @apply text-sm text-muted mb-2;
+}
+
+.timeline__description {
+  @apply text-sm text-muted leading-relaxed;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .timeline {
+    @apply pl-6;
+  }
+
+  .timeline__dot {
+    @apply -left-[1.875rem];
+  }
+}

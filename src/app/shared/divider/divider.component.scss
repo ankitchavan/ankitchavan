@@ -1,0 +1,7 @@
+.divider {
+  @apply py-4;
+
+  &__line {
+    @apply h-px bg-border max-w-4xl mx-auto opacity-60;
+  }
+}

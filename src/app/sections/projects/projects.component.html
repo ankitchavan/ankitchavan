@@ -1,0 +1,25 @@
+<section id="projects" class="projects">
+  <h2 class="projects__title">Featured Work</h2>
+
+  <div class="projects__grid">
+    <div
+      class="project-card"
+      *ngFor="let project of projects"
+    >
+      <h3 class="project-card__title">{{ project.title }}</h3>
+
+      <p class="project-card__description">
+        {{ project.description }}
+      </p>
+
+      <div class="project-card__tags">
+        <span
+          class="tag"
+          *ngFor="let tag of project.tags"
+        >
+          {{ tag }}
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

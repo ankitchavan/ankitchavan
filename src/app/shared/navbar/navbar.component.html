@@ -1,0 +1,25 @@
+<div class="scroll-progress">
+  <div class="progress-bar" [style.width.%]="scrollProgress"  [style.background]="currentGradient"></div>
+</div>
+
+<header class="navbar">
+  <div class="navbar__container">
+    
+    <!-- LOGO -->
+    <div class="navbar__logo">
+      Ankit<span>.</span>
+    </div>
+
+    <!-- NAV LINKS -->
+    <nav class="navbar__menu">
+      <button
+        *ngFor="let item of navItems"
+        (click)="scrollTo(item.id)"
+        [class.active]="activeSection === item.id"
+      >
+        {{ item.label }}
+      </button>
+    </nav>
+
+  </div>
+</header>

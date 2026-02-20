@@ -1,0 +1,95 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-bg text-text font-sans;
+  overflow-x: hidden;
+}
+
+.site {
+  @apply min-h-screen bg-bg;
+
+  &__bg {
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 20%, #DBEAFE 0%, transparent 40%),
+      radial-gradient(circle at 80% 0%, #E0F2FE 0%, transparent 40%);
+    z-index: -1;
+  }
+
+  &__container {
+    @apply max-w-[1200px] mx-auto px-20;
+  }
+}
+
+/* SECTION BASE */
+section {
+    scroll-margin-top: 100px;
+    @apply py-24 sm:py-20 lg:py-24;
+}
+
+/* ALTERNATE SECTION BACKGROUND */
+section:nth-of-type(even) {
+  @apply bg-section rounded-2xl px-6;
+}
+
+/* Container padding per device */
+.site__container {
+  @apply px-4 sm:px-6 lg:px-8;
+}
+
+/* Typography scale */
+h1 {
+  @apply text-3xl sm:text-4xl lg:text-5xl;
+}
+
+h2 {
+  @apply text-2xl sm:text-3xl;
+}
+
+button, a {
+  min-height: 44px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+.project-card,
+.beyond-card,
+.timeline__content {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .beyond-card,
+  .timeline__content {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
